@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let k = 1;
+        function change() {
+    if(k<5&&k>0){
+k++;
+} 
+else {
+    k=1
+  }
+    condition(k);
+   }
+    function back(){
+    if(k<=5&&k>1){
+    k--;
+    }
+     else {
+    k=5;
+  }
+    condition(k);
+  }
+        function condition(k){
+    let d = document;
+        if(k==1){
+    d.body.style.background = "url(1.jpg) ";
+    }
+        else if(k==2){
+    d.body.style.background = "url(2.jpg) ";
+    }
+        else if(k==3){
+    d.body.style.background = "url(3.jpg)";
+    }
+    else if(k==4){
+    d.body.style.background = "url(4.jpg)";
+    }
+    else if(k>4){
+    d.body.style.background = "url(5.jpg)";
+    } 
+      }  
+    </script>
+</head>
+    <body style="background:url(1.jpg)">
+    <form action="">
+        <h1 title="пожалуйста, введите свои данные в форме регистрации">регистрация</h1>
+        <div class="group">
+            <label for="">Имя пользователя:</label>
+            <input type="text" required>
+        </div>
+        <div class="group">
+            <label for="">пароль:</label>
+            <input type="password" required>
+        </div>
+        <div class="group">
+            <label for="">подтвердите пароль:</label>
+            <input type="password" required>
+        </div>
+        <div class="group">
+            <label for="">E-mail:</label>
+            <input type="email" required>
+        </div>
+        <div class="group">
+            <center><button>зарегестрироваться</button></center> 
+          <input type="button" value="сменить обложку страницы" onclick="change()">
+         <input type="button" value="вернуть предыдущую обложку" onclick="back()">        
+        </div>
+    </form>
+</body>
+</html>
